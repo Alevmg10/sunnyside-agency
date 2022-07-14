@@ -25,8 +25,8 @@ function Testimonials() {
                     </div>
                     {/* Name */}
                     <div className='flex flex-col justify-center items-center pt-7'>
-                        <h1 class="text-veryDarkDesaturatedBlue font-fraunces font-black text-base">Emily R.</h1>
-                        <h2 class="font-barlow font-medium text-xs text-veryDarkGrayishBlue">Marketing Director</h2>
+                        <h1 className="text-veryDarkDesaturatedBlue font-fraunces font-black text-base">Emily R.</h1>
+                        <h2 className="font-barlow font-medium text-xs text-veryDarkGrayishBlue">Marketing Director</h2>
                     </div>
                 </div>
                 {/* Testimonial two (2) */}

@@ -9,13 +9,13 @@ import Testimonials from './components/Testimonials';
 function App() {
   return (
     <Router>
-      <div>
+      <>
           <Header/>
           <HeroSection/>
           <Testimonials/>
           <Gallery/>
           <Footer/>
-      </div>
+      </>
     </Router>
   );
 }

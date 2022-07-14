@@ -30,7 +30,7 @@ function HeroSection() {
             <div className='hidden md:block w-full md:w-1/2'>
                 <img src={eggImg} alt="" />
             </div>
-            <div className='md:hidden w-full md:w-1/2'>
+            <div className='block md:hidden w-full md:w-1/2'>
                 <img src={eggImgM} alt="" />
             </div>
         </div>
@@ -53,7 +53,7 @@ function HeroSection() {
             <div className='hidden md:block w-full md:w-1/2'>
                 <img src={standImg} alt="" />
             </div>
-            <div className='md:hidden w-full md:w-1/2'>
+            <div className='block md:hidden w-full md:w-1/2'>
                 <img src={standImgM} alt="" />
             </div>
         </div>
@@ -64,7 +64,7 @@ function HeroSection() {
             <div className='flex flex-col justify-end items-center w-full md:w-1/2 relative'>
                 {/* Background image */}
                 <img className='-z-10 hidden md:block' src={graphicImg} alt="" />
-                <img className='-z-10 md:hidden' src={graphicImgM} alt="" />
+                <img className='-z-10 block md:hidden' src={graphicImgM} alt="" />
                 {/* Text */}
                 <div className='absolute md:w-9/12 flex flex-col justify-center space-y-6 px-10 mt-6 mb-32 md:mb-8 text-center items-center'>
                     <div className=''>
@@ -82,7 +82,7 @@ function HeroSection() {
             <div className='flex flex-col justify-end items-center w-full md:w-1/2 relative'>
                 {/* Background image */}
                 <img className='-z-10 hidden md:block' src={photographyImg} alt="" />
-                <img className='-z-10 md:hidden' src={photographyImgM} alt="" />
+                <img className='-z-10 block md:hidden' src={photographyImgM} alt="" />
                 {/* Text */}
                 <div className='absolute md:w-9/12 flex flex-col justify-center space-y-6 px-10 mt-6 mb-32 md:mb-8 text-center items-center'>
                     <div className=''>
@@ -98,7 +98,7 @@ function HeroSection() {
         </div>   
 
     </>
-  )
+  );
 }
 
 export default HeroSection;

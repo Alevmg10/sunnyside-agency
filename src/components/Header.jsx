@@ -1,4 +1,4 @@
-import React from 'react';
+import React,  {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Header.css';
 import logoImg from '../images/logo.svg';
@@ -7,14 +7,18 @@ import arrowIcon from '../images/icon-arrow-down.svg';
 
 function Header() {
 
-//   const btn = document.getElementById('menu-btn');
-//   const nav = document.getElementById('menu');
+  const [active, setActive] = useState("nav__menu");
+  const [icon, setIcon] = useState("nav__toggler");
+  const navToggle = () => {
+    if (active === "nav__menu") {
+      setActive("nav__menu nav__active");
+    } else setActive("nav__menu");
 
-//   btn.addEventListener('click', () => {
-//   btn.classList.toggle('open')
-//   nav.classList.toggle('flex')
-//   nav.classList.toggle('hidden')
-// })
+    // Icon Toggler
+    if (icon === "nav__toggler") {
+      setIcon("nav__toggler open");
+    } else setIcon("nav__toggler");
+  };
 
   return (
     <div className='header__background w-full min-h-screen relative'>
@@ -25,30 +29,32 @@ function Header() {
                 <img src={logoImg} alt=""/>
             </div>
             {/* Menu */}
-            <div className='hidden md:flex'>
-              <ul className='space-x-2 md:flex'>
-                <li className='text-white font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite'><Link to="/">About</Link></li>
-                <li className='text-white font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite'><Link to="/">Services</Link></li>
-                <li className='text-white font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite'><Link to="/">Projects</Link></li>
-                <li className='text-darkBlue bg-white uppercase font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite hover:text-white'><Link to="/">Contact</Link></li>
-              </ul>
-
+            <div className='flex justify-center items-center'>
+                <ul className='space-x-2 hidden md:flex list-none'>
+                  <li className='text-white font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite'><Link to="/">About</Link></li>
+                  <li className='text-white font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite'><Link to="/">Services</Link></li>
+                  <li className='text-white font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite'><Link to="/">Projects</Link></li>
+                  <li className='text-darkBlue bg-white uppercase font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite hover:text-white'><Link to="/">Contact</Link></li>
+                </ul>
               {/* Hamburger Icon  */}
-              <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"></span>
-              </button>
+              <div onClick={navToggle} className={icon}>
+                <div className="block hamburger md:hidden focus:outline-none">
+                  <span className="hamburger-top"></span>
+                  <span className="hamburger-middle"></span>
+                  <span className="hamburger-bottom"></span>
+                </div>
+              </div>
             </div>
-  
             {/* Mobile Menu */}
-            <div class="md:hidden">
-              <ul id='menu' className='space-y-1 flex-col items-center hidden self-end py-8 mt-10 font-semibold sm:w-auto sm:self-center left-6 right-6 absolute'>
-                <li className='text-white font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite'><Link to="/">About</Link></li>
-                <li className='text-white font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite'><Link to="/">Services</Link></li>
-                <li className='text-white font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite'><Link to="/">Projects</Link></li>
-                <li className='text-darkBlue bg-white uppercase font-barlow font-semibold p-3 px-8 rounded-full  hover:bg-transparentWhite hover:text-white'><Link to="/">Contact</Link></li>
-              </ul>
+            <div className={active}>
+              <div className=" w-10/12 mt-4">
+                <ul className='list-none bg-white space-y-4 absolute flex-col justify-center items-center md:hidden self-end py-8 mt-10 font-semibold sm:w-auto sm:self-center left-6 right-6'>
+                  <li className='text-grayishBlue font-barlow font-semibold px-8'><Link to="/">About</Link></li>
+                  <li className='text-grayishBlue font-barlow font-semibold px-8'><Link to="/">Services</Link></li>
+                  <li className='text-grayishBlue font-barlow font-semibold px-8'><Link to="/">Projects</Link></li>
+                  <li className='text-darkBlue bg-yellow uppercase font-barlow font-semibold py-3 px-8 rounded-full'><Link to="/">Contact</Link></li>
+                </ul>
+              </div>
             </div>
         </nav>
 
@@ -61,7 +67,7 @@ function Header() {
           <img src={arrowIcon} alt="" />
         </div>
     </div>
-  )
+  );
 }
 
 export default Header;
