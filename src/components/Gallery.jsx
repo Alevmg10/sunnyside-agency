@@ -12,7 +12,7 @@ import sugarImgM from '../images/mobile/image-gallery-sugar-cubes.jpg';
 
 function Gallery() {
   return (
-    <div className='w-screen mt-8 flex flex-wrap md:flex-nowrap md:flex-row'>
+    <div className='w-full mt-8 flex flex-wrap md:flex-nowrap md:flex-row'>
         {/* Desktop */}
         <Images className='hidden md:block bg-no-repeat bg-top' src={milkImg} alt="" />
         <Images className='hidden md:block bg-center' src={orangeGalImg} alt="" />

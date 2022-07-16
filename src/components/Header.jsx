@@ -7,7 +7,7 @@ import arrowIcon from '../images/icon-arrow-down.svg';
 
 function Header() {
 
-  const [active, setActive] = useState("nav__menu");
+  const [active, setActive] = useState("nav__menu nav__active");
   const [icon, setIcon] = useState("nav__toggler");
   const navToggle = () => {
     if (active === "nav__menu") {
@@ -46,13 +46,13 @@ function Header() {
               </div>
             </div>
             {/* Mobile Menu */}
-            <div className={active}>
-              <div className=" w-10/12 mt-4">
-                <ul className='list-none bg-white space-y-4 absolute flex-col justify-center items-center md:hidden self-end py-8 mt-10 font-semibold sm:w-auto sm:self-center left-6 right-6'>
-                  <li className='text-grayishBlue font-barlow font-semibold px-8'><Link to="/">About</Link></li>
-                  <li className='text-grayishBlue font-barlow font-semibold px-8'><Link to="/">Services</Link></li>
-                  <li className='text-grayishBlue font-barlow font-semibold px-8'><Link to="/">Projects</Link></li>
-                  <li className='text-darkBlue bg-yellow uppercase font-barlow font-semibold py-3 px-8 rounded-full'><Link to="/">Contact</Link></li>
+            <div id="menu__mobile" className={active}>
+              <div className="md:hidden">
+                <ul className=' bg-white font-semibold absolute text-center flex flex-col justify-center items-center self-end px-8 py-8 mt-10 space-y-6 sm:w-1/3 sm:self-center left-6 right-6 drop-shadow-md'>
+                  <li className='text-darkGrayishBlue font-barlow font-bold'><Link to="/">About</Link></li>
+                  <li className='text-darkGrayishBlue font-barlow font-bold'><Link to="/">Services</Link></li>
+                  <li className='text-darkGrayishBlue font-barlow font-bold'><Link to="/">Projects</Link></li>
+                  <li className='w-1/2 text-darkBlue bg-yellow uppercase font-barlow font-bold py-3 rounded-full'><Link to="/">Contact</Link></li>
                 </ul>
               </div>
             </div>

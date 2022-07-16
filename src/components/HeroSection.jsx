@@ -13,9 +13,9 @@ function HeroSection() {
   return (
     <>
         {/* Egg */}
-        <div className='w-screen flex flex-col-reverse md:flex-row'>
+        <div className='w-full flex flex-col-reverse md:flex-row'>
             {/* Text, Buttom */}
-            <div className='container md:w-1/2 flex flex-col justify-center space-y-10 px-10 md:py-0 py-10 text-center md:text-left items-center md:items-start'>
+            <div className=' md:w-1/2 flex flex-col justify-center space-y-10 px-10 md:py-0 py-10 text-center md:text-left items-center md:items-start'>
                 <div className=''>
                     <h1 className='text-veryDarkDesaturatedBlue font-extrabold font-fraunces text-4xl'>Transform your brand</h1>
                 </div>
@@ -27,18 +27,18 @@ function HeroSection() {
                 <Link to="/" className=' text-veryDarkDesaturatedBlue uppercase font-fraunces font-bold'>Learn more</Link>
             </div>
             {/* Image */}
-            <div className='hidden md:block w-full md:w-1/2'>
+            <div className='hidden md:block md:w-1/2'>
                 <img src={eggImg} alt="" />
             </div>
-            <div className='block md:hidden w-full md:w-1/2'>
+            <div className='block md:hidden w-full'>
                 <img src={eggImgM} alt="" />
             </div>
         </div>
 
         {/*Stand Out */}
-        <div className='w-screen flex flex-col-reverse md:flex-row-reverse'>
+        <div className='w-full flex flex-col-reverse md:flex-row-reverse'>
             {/* Text, Buttom */}
-            <div className='container md:w-1/2 flex flex-col justify-center space-y-10 px-10 md:py-0 py-10 text-center md:text-left items-center md:items-start'>
+            <div className=' md:w-1/2 flex flex-col justify-center space-y-10 px-10 md:py-0 py-10 text-center md:text-left items-center md:items-start'>
                 <div className=''>
                     <h1 className='text-veryDarkDesaturatedBlue font-extrabold font-fraunces text-4xl'>Stand out to the right audience</h1>
                 </div>
@@ -50,27 +50,27 @@ function HeroSection() {
                 <Link to="/" className=' text-veryDarkDesaturatedBlue uppercase font-fraunces font-bold'>Learn more</Link>
             </div>
             {/* Image */}
-            <div className='hidden md:block w-full md:w-1/2'>
+            <div className='hidden md:block md:w-1/2'>
                 <img src={standImg} alt="" />
             </div>
-            <div className='block md:hidden w-full md:w-1/2'>
+            <div className='block md:hidden sm:w-full'>
                 <img src={standImgM} alt="" />
             </div>
         </div>
 
         {/* Fruits */}
-        <div className='flex flex-col md:flex-row min-h-max w-screen'>
+        <div className='flex flex-col md:flex-row w-full'>
             {/* Cherry */}
-            <div className='flex flex-col justify-end items-center w-full md:w-1/2 relative'>
+            <div className='flex flex-col justify-end items-center  relative'>
                 {/* Background image */}
-                <img className='-z-10 hidden md:block' src={graphicImg} alt="" />
+                <img className='-z-10 hidden md:block w-full' src={graphicImg} alt="" />
                 <img className='-z-10 block md:hidden' src={graphicImgM} alt="" />
                 {/* Text */}
                 <div className='absolute md:w-9/12 flex flex-col justify-center space-y-6 px-10 mt-6 mb-32 md:mb-8 text-center items-center'>
                     <div className=''>
                         <h1 className='text-veryDarkDesaturatedBlue font-extrabold font-fraunces text-xl md:text-2xl'>Graphic Design</h1>
                     </div>
-                    <p className='text-center font-semibold text-xs md:text-sm font-barlow text-veryDarkGrayishBlue'> 
+                    <p className='text-center font-semibold text-xs md:text-sm font-barlow text-darkDesaturatedCyan'> 
                         Great designs make you memorable. We deliver
                         artwork taht underscores your bran message
                         and captures potential clients' attention.
@@ -79,14 +79,15 @@ function HeroSection() {
             </div>
 
             {/* Orange */}
-            <div className='flex flex-col justify-end items-center w-full md:w-1/2 relative'>
+            <div className='flex flex-col justify-end items-center  relative'>
                 {/* Background image */}
-                <img className='-z-10 hidden md:block' src={photographyImg} alt="" />
-                <img className='-z-10 block md:hidden' src={photographyImgM} alt="" />
+                    <img className='-z-10 hidden md:block w-full' src={photographyImg} alt="" />
+                    <img className='-z-10 block md:hidden' src={photographyImgM} alt="" />
+
                 {/* Text */}
                 <div className='absolute md:w-9/12 flex flex-col justify-center space-y-6 px-10 mt-6 mb-32 md:mb-8 text-center items-center'>
                     <div className=''>
-                        <h1 className='text-veryDarkDesaturatedBlue font-extrabold font-fraunces text-xl md:text-2xl'>Photography</h1>
+                        <h1 className='text-darkBlue font-extrabold font-fraunces text-xl md:text-2xl'>Photography</h1>
                     </div>
                     <p className='text-center font-semibold text-xs md:text-sm font-barlow text-veryDarkGrayishBlue'> 
                         Increase your credibility by getting the most
@@ -95,8 +96,7 @@ function HeroSection() {
                     </p>
                 </div>
             </div>
-        </div>   
-
+        </div>
     </>
   );
 }

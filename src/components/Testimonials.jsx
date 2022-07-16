@@ -5,15 +5,15 @@ import jennieImg from '../images/image-jennie.jpg';
 
 function Testimonials() {
   return (
-    <section className='py-8 mt-16'>
+    <section className='w-full py-8 mt-16'>
          <h2 className='font-barlow text-center font-bold text-2xl uppercase text-veryDarkGrayishBlue'>
                 Client Testimonials
         </h2>
-        <div className='w-screen flex flex-col justify-center items-center md:flex-row'>
+        <div className='w-full flex flex-col justify-center items-center md:flex-row'>
            {/* Testimonials container */}
-            <div className='max-w-fit flex flex-col mt-16 md:space-x-8 md:flex-row md:w-screen'>
+            <div className=' flex flex-col mt-16 space-y-10 md:space-y-0 md:space-x-8 md:flex-row'>
                 {/* Testimonial one (1) */}
-                <div className='flex flex-col justify-between items-center space-y-6 '>
+                <div className='flex flex-col justify-between items-center space-y-4 md:space-y-6 '>
                     <img className='rounded-full w-16' src={emilyImg} alt="" />
                     {/* Text */}
                     <div className='w-60'>
@@ -24,13 +24,13 @@ function Testimonials() {
                         </p>
                     </div>
                     {/* Name */}
-                    <div className='flex flex-col justify-center items-center pt-7'>
+                    <div className='flex flex-col justify-center items-center pt-2 md:pt-6'>
                         <h1 className="text-veryDarkDesaturatedBlue font-fraunces font-black text-base">Emily R.</h1>
                         <h2 className="font-barlow font-medium text-xs text-veryDarkGrayishBlue">Marketing Director</h2>
                     </div>
                 </div>
                 {/* Testimonial two (2) */}
-                <div className='max-w-fit flex flex-col justify-between items-center space-y-6'>
+                <div className='flex flex-col justify-between items-center space-y-4 md:space-y-6'>
                     <img className='rounded-full w-16' src={thomasImg} alt="" />
                     {/* Text */}
                     <div className='w-60'>
@@ -42,13 +42,13 @@ function Testimonials() {
                         </p>
                     </div>
                     {/* Name */}
-                    <div className='flex flex-col justify-center items-center pt-7'>
+                    <div className='flex flex-col justify-center items-center md:pt-6 pt-2'>
                         <h1 className="text-veryDarkDesaturatedBlue font-fraunces font-black text-base">Thomas S.</h1>
                         <h2 className="font-barlow font-medium text-xs text-veryDarkGrayishBlue">Chief Operating Officer</h2>
                     </div>
                 </div>
                 {/* Testimonial three (3) */}
-                <div className='flex flex-col justify-between items-center space-y-6'>
+                <div className='flex flex-col justify-between items-center space-y-4 md:space-y-6'>
                     <img className='rounded-full w-16' src={jennieImg} alt="" />
                     {/* Text */}
                     <div className='w-60'>
@@ -59,7 +59,7 @@ function Testimonials() {
                         </p>
                     </div>
                     {/* Name */}
-                    <div className='flex flex-col justify-center items-center pt-7'>
+                    <div className='flex flex-col justify-center items-center md:pt-6 pt-2'>
                         <h1 className="text-veryDarkDesaturatedBlue font-fraunces font-black text-base">Jennie F.</h1>
                         <h2 className="font-barlow font-medium text-xs text-veryDarkGrayishBlue">Chief Operating Officer</h2>
                     </div>
@@ -67,7 +67,7 @@ function Testimonials() {
             </div>
         </div>
     </section>
-  )
+  );
 }
 
 export default Testimonials;

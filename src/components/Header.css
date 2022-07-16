@@ -11,6 +11,9 @@
     display: none;
   }
 
+  /* #menu__mobile {
+
+  } */
 
 @media screen and (max-width:480px) {
   .header__background {
@@ -25,7 +28,7 @@
 }
 
 .nav__toggler {
-  display: block;
+  display: inline;
   cursor: pointer;
 }
 
@@ -61,7 +64,8 @@
 
 /* Active Class */
 .nav__active {
-  transform: translateX(0%);
+  /* transform: translateX(0%); */
+  display: none;
 }
 
 .open {
