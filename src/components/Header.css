@@ -84,3 +84,17 @@
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
+
+#mobileMenuContainer:before{
+  content: "";
+  position:absolute;
+  height: 0;
+  width: 0;
+  right: 24px;
+  top: 68px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid white;
+  border-bottom: 10px solid white;
+
+}

@@ -46,7 +46,7 @@ function Header() {
               </div>
             </div>
             {/* Mobile Menu */}
-            <div id="menu__mobile" className={active}>
+            <div id="mobileMenuContainer" className={active}>
               <div className="md:hidden">
                 <ul className=' bg-white font-semibold absolute text-center flex flex-col justify-center items-center self-end px-8 py-8 mt-10 space-y-6 sm:w-1/3 sm:self-center left-6 right-6 drop-shadow-md'>
                   <li className='text-darkGrayishBlue font-barlow font-bold'><Link to="/">About</Link></li>
