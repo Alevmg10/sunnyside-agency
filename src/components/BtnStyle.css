@@ -1,0 +1,47 @@
+.btn {
+    background-color: var(--background-color);
+    /* padding: .5em 1em; */
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+  
+    --background-color: hsl(0, 0%, 100%);
+    --border-size: 2px;
+    --accent-yellow: hsl(51, 100%, 49%);
+    --accent-red: hsl(7, 99%, 70%);
+  }
+
+  .btn.btnHoverUnderlineYellow::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--border-size);
+    background-color: var(--accent-yellow);
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+  }
+
+  .btn.btnHoverUnderlineYellow:hover::before,
+  .btn.btnHoverUnderlineYellow:focus::before {
+    transform: scaleX(1);
+  }
+
+  .btn.btnHoverUnderlineRed::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--border-size);
+    background-color: var(--accent-red);
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+  }
+
+  .btn.btnHoverUnderlineRed:hover::before,
+  .btn.btnHoverUnderlineRed:focus::before {
+    transform: scaleX(1);
+  }

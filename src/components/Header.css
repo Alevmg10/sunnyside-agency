@@ -11,10 +11,6 @@
     display: none;
   }
 
-  /* #menu__mobile {
-
-  } */
-
 @media screen and (max-width:480px) {
   .header__background {
     background-image: url('../images/mobile/image-header.jpg');
@@ -28,15 +24,17 @@
 }
 
 .nav__toggler {
-  display: inline;
+  display: flex;
   cursor: pointer;
+  position: absolute;
+  right: 1.5rem;
 }
 
 /* Hamburger Menu */
 .hamburger {
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   transition: all 0.25s;
   position: relative;
 }
@@ -47,7 +45,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 24px;
+  width: 1.5rem;
   height: 2px;
   background: #fff;
   transform: rotate(0);
@@ -64,7 +62,7 @@
 
 /* Active Class */
 .nav__active {
-  /* transform: translateX(0%); */
+  transform: translateX(0%);
   display: none;
 }
 
@@ -85,13 +83,13 @@
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
-#mobileMenuContainer:before{
+#mobileMenu:before{
   content: "";
-  position:absolute;
+  position: absolute;
   height: 0;
   width: 0;
-  right: 24px;
-  top: 68px;
+  right: 1.5rem;
+  top: 4.4rem;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
   border-right: 10px solid white;

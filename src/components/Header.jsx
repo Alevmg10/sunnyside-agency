@@ -38,7 +38,7 @@ function Header() {
                 </ul>
               {/* Hamburger Icon  */}
               <div onClick={navToggle} className={icon}>
-                <div className="block hamburger md:hidden focus:outline-none">
+                <div className="hamburger md:hidden focus:outline-none">
                   <span className="hamburger-top"></span>
                   <span className="hamburger-middle"></span>
                   <span className="hamburger-bottom"></span>
@@ -46,13 +46,13 @@ function Header() {
               </div>
             </div>
             {/* Mobile Menu */}
-            <div id="mobileMenuContainer" className={active}>
+            <div id="mobileMenu" className={active}>
               <div className="md:hidden">
                 <ul className=' bg-white font-semibold absolute text-center flex flex-col justify-center items-center self-end px-8 py-8 mt-10 space-y-6 sm:w-1/3 sm:self-center left-6 right-6 drop-shadow-md'>
-                  <li className='text-darkGrayishBlue font-barlow font-bold'><Link to="/">About</Link></li>
-                  <li className='text-darkGrayishBlue font-barlow font-bold'><Link to="/">Services</Link></li>
-                  <li className='text-darkGrayishBlue font-barlow font-bold'><Link to="/">Projects</Link></li>
-                  <li className='w-1/2 text-darkBlue bg-yellow uppercase font-barlow font-bold py-3 rounded-full'><Link to="/">Contact</Link></li>
+                  <li className='btn btnHoverUnderlineYellow text-darkGrayishBlue font-barlow font-bold'><Link to="/">About</Link></li>
+                  <li className='btn btnHoverUnderlineYellow text-darkGrayishBlue font-barlow font-bold'><Link to="/">Services</Link></li>
+                  <li className='btn btnHoverUnderlineYellow text-darkGrayishBlue font-barlow font-bold'><Link to="/">Projects</Link></li>
+                  <li className='w-1/2 text-darkBlue bg-yellow hover:bg-opacity-75 uppercase font-barlow font-bold py-3 rounded-full'><Link to="/">Contact</Link></li>
                 </ul>
               </div>
             </div>
